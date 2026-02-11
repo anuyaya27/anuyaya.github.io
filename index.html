@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@300;400;600;900&display=swap" rel="stylesheet">
-</head>
 <body>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -526,12 +525,13 @@ footer {
     .social-links { flex-wrap: wrap; }
 }
 </style>
+</head>
 
 <nav>
     <div class="logo">AS</div>
     <ul class="nav-menu">
         <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Research</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -572,27 +572,32 @@ footer {
     <p class="section-subtitle">Passionate about leveraging technology and data science to solve complex problems in finance and beyond</p>
     
     <div class="interest-grid">
-        <div class="interest-card">
-            <div class="interest-icon"></div>
-            <h3 class="interest-title">Artificial Intelligence & ML</h3>
-            <p>Fascinated by AI's potential to revolutionize financial markets and solve complex problems</p>
-        </div>
-        <div class="interest-card">
-            <div class="interest-icon"></div>
-            <h3 class="interest-title">Finance & Data Analysis</h3>
-            <p>Passionate about leveraging data science for predictive modeling and market analysis</p>
-        </div>
-        <div class="interest-card">
-            <div class="interest-icon"></div>
-            <h3 class="interest-title">Algorithmic Trading</h3>
-            <p>Developing strategies to understand and predict market behaviors through code</p>
-        </div>
-        <div class="interest-card">
-            <div class="interest-icon"></div>
-            <h3 class="interest-title">Fintech Innovation</h3>
-            <p>Eager to contribute to the intersection of technology and financial services</p>
-        </div>
+
+    <div class="interest-card">
+        <div class="interest-icon"></div>
+        <h3 class="interest-title">Artificial Intelligence</h3>
+        <p>Building intelligent systems that turn complex data into actionable insights, with a focus on real-world impact.</p>
     </div>
+
+    <div class="interest-card">
+        <div class="interest-icon"></div>
+        <h3 class="interest-title">Machine Learning</h3>
+        <p>Designing predictive models and learning algorithms to uncover patterns and drive data-informed decisions.</p>
+    </div>
+
+    <div class="interest-card">
+        <div class="interest-icon"></div>
+        <h3 class="interest-title">Finance & Data Analysis</h3>
+        <p>Applying statistical modeling and analytics to understand markets, optimize strategies, and extract meaningful signals from data.</p>
+    </div>
+
+    <div class="interest-card">
+        <div class="interest-icon"></div>
+        <h3 class="interest-title">Algorithmic Trading</h3>
+        <p>Developing systematic trading strategies and backtesting pipelines to model market behavior through code.</p>
+    </div>
+
+</div>
 </section>
 
 <section id="research">
@@ -605,6 +610,7 @@ footer {
             Investigating how information asymmetries and strategic interactions between market participants 
             influence price discovery, trading patterns, and market efficiency in modern financial markets.
         </p>
+        <a href="https://drive.google.com/file/d/1_OA_DaWomvfMUJvULG9x9If43yq42KiN/view?usp=drive_link" target="_blank" class="project-link">Working Paper →</a>
         <div class="tag-container">
             <span class="skill-tag">Market Microstructure</span>
             <span class="skill-tag">Game Theory</span>
@@ -612,33 +618,6 @@ footer {
         </div>
     </div>
 
-    <div class="research-card">
-        <span class="status-badge past">PAST</span>
-        <h3 class="card-title">Market Structure & Growth Dynamics in Southeast Asia</h3>
-        <p class="card-desc">
-            Analyzing the evolution of financial market structures, regulatory frameworks, and economic growth 
-            patterns across Southeast Asian economies, with focus on emerging market dynamics and regional integration.
-        </p>
-        <div class="tag-container">
-            <span class="skill-tag">Emerging Markets</span>
-            <span class="skill-tag">Development Economics</span>
-            <span class="skill-tag">Regional Analysis</span>
-        </div>
-    </div>
-
-    <div class="research-card">
-        <span class="status-badge">ONGOING</span>
-        <h3 class="card-title">Predicting Market Anomalies with Transformer Models</h3>
-        <p class="card-desc">
-            Exploring how transformer-based architectures (like GPT or BERT) can identify subtle temporal 
-            dependencies and news-based anomalies in equity and crypto markets.
-        </p>
-        <div class="tag-container">
-            <span class="skill-tag">AI</span>
-            <span class="skill-tag">Quant Finance</span>
-            <span class="skill-tag">NLP</span>
-        </div>
-    </div>
 </section>
 
 <section id="projects">
@@ -651,12 +630,17 @@ footer {
                 <h3 class="card-title">PRISM</h3>
                 <div class="card-subtitle">In Development</div>
                 <p class="card-desc">
-                    Parallel Reasoning & Inference Synthesis Machine. Built parallel evaluation system for LLMs with async execution.
+                    A parallel LLM orchestration system that asynchronously evaluates multiple models and synthesizes their reasoning into higher-quality outputs. Designed for scalable experimentation and automated model benchmarking.
                 </p>
                 <div class="tag-container">
                     <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Async</span>
-                    <span class="skill-tag">LLMs</span>
+                    <span class="skill-tag">Concurrent LLM execution</span>
+                    <span class="skill-tag">Reasoning synthesis</span>
+                    <span class="skill-tag">Model benchmarking</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/anuyaya27/Prism" target="_blank" class="project-link">GitHub →</a>
+                    <a href="https://devpost.com/software/watt-s-up" target="_blank" class="project-link">Devpost →</a>
                 </div>
             </div>
         </div>
@@ -667,15 +651,15 @@ footer {
                 <h3 class="card-title">WattsUp</h3>
                 <div class="card-subtitle">2nd Best Overall - HackPrinceton</div>
                 <p class="card-desc">
-                    ML-powered solar feasibility platform using computer vision to evaluate rooftop suitability across 10K+ square miles.
+                    A computer vision platform that evaluates rooftop solar potential using satellite imagery and NASA climate data, enabling large-scale feasibility analysis across 10K+ square miles.
                 </p>
                 <div class="tag-container">
-                    <span class="skill-tag">ML</span>
+                    <span class="skill-tag">Machine Learning</span>
                     <span class="skill-tag">Computer Vision</span>
-                    <span class="skill-tag">NASA APIs</span>
+                    <span class="skill-tag">Climate Data Integration</span>
                 </div>
                 <div class="project-links">
-                    <a href="https://github.com/anuyaya27/WattsUp" target="_blank" class="project-link">GitHub →</a>
+                    <a href="https://github.com/deepanshgandhi/Watts-Up" target="_blank" class="project-link">GitHub →</a>
                 </div>
             </div>
         </div>
@@ -866,7 +850,7 @@ footer {
 </section>
 
 <footer>
-    <p>Thanks for visting my portfolio!</p>
+    <p>Thanks for visiting my portfolio!</p>
 </footer>
 
 <script>
