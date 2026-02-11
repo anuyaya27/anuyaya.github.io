@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@300;400;600;900&display=swap" rel="stylesheet">
+</head>
 <body>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -43,6 +44,7 @@ nav {
     font-family: 'Archivo Black', sans-serif;
     font-size: 1.5rem;
     letter-spacing: -1px;
+    cursor: pointer;
 }
 .nav-menu {
     display: flex;
@@ -299,6 +301,10 @@ section {
 .interest-card:nth-child(2) { background: var(--white); }
 .interest-card:nth-child(3) { background: var(--red); color: var(--white); }
 .interest-card:nth-child(4) { background: var(--blue); color: var(--white); }
+.interest-card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0 var(--black);
+}
 .interest-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -355,20 +361,37 @@ section {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
-/* Experience */
+/* Experience - CORRECTED LAYOUT */
+.experience-list {
+    display: grid;
+    gap: 2rem;
+}
 .experience-card {
     border: 3px solid var(--black);
     padding: 0;
-    margin-bottom: 2rem;
+    transition: all 0.3s;
+}
+.experience-card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0 var(--black);
 }
 .experience-header {
     padding: 2rem;
     border-bottom: 3px solid var(--black);
 }
-.experience-header:nth-child(4n+1) { background: var(--yellow); }
-.experience-header:nth-child(4n+2) { background: var(--red); color: var(--white); }
-.experience-header:nth-child(4n+3) { background: var(--blue); color: var(--white); }
-.experience-header:nth-child(4n) { background: var(--white); }
+.experience-card:nth-child(1) .experience-header { background: var(--yellow); }
+.experience-card:nth-child(2) .experience-header { background: var(--red); color: var(--white); }
+.experience-card:nth-child(3) .experience-header { background: var(--blue); color: var(--white); }
+.experience-card:nth-child(4) .experience-header { background: var(--white); }
+.experience-card:nth-child(5) .experience-header { background: var(--yellow); }
+.experience-card:nth-child(6) .experience-header { background: var(--red); color: var(--white); }
+.experience-card:nth-child(7) .experience-header { background: var(--blue); color: var(--white); }
+.experience-card:nth-child(8) .experience-header { background: var(--white); }
+.experience-card:nth-child(9) .experience-header { background: var(--yellow); }
+.experience-card:nth-child(10) .experience-header { background: var(--red); color: var(--white); }
+.experience-card:nth-child(11) .experience-header { background: var(--blue); color: var(--white); }
+.experience-card:nth-child(12) .experience-header { background: var(--white); }
+.experience-card:nth-child(13) .experience-header { background: var(--yellow); }
 .experience-body {
     padding: 2rem;
 }
@@ -384,7 +407,28 @@ section {
 .experience-date {
     font-size: 0.9rem;
     opacity: 0.8;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
+}
+.show-all-btn {
+    display: block;
+    margin: 3rem auto 0;
+    padding: 1rem 2rem;
+    background: var(--black);
+    color: var(--white);
+    border: none;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 900;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.show-all-btn:hover {
+    background: var(--red);
+}
+.hidden {
+    display: none;
 }
 /* Projects */
 .projects-grid {
@@ -395,11 +439,17 @@ section {
 .project-card {
     border: 3px solid var(--black);
     padding: 0;
+    transition: all 0.3s;
+}
+.project-card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0 var(--black);
 }
 .project-header {
     padding: 2rem;
     text-align: center;
     font-size: 3rem;
+    font-family: 'Archivo Black', sans-serif;
     border-bottom: 3px solid var(--black);
 }
 .project-card:nth-child(3n+1) .project-header { background: var(--red); color: var(--white); }
@@ -411,6 +461,7 @@ section {
 .project-links {
     display: flex;
     gap: 1rem;
+    margin-top: 1rem;
 }
 .project-link {
     color: var(--black);
@@ -435,6 +486,11 @@ section {
 .skill-category {
     border: 3px solid var(--black);
     padding: 2rem;
+    transition: all 0.3s;
+}
+.skill-category:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 5px 5px 0 var(--black);
 }
 .skill-category:nth-child(4n+1) { background: var(--yellow); }
 .skill-category:nth-child(4n+2) { background: var(--white); }
@@ -484,8 +540,9 @@ section {
 .social-links {
     display: flex;
     gap: 2rem;
-    justify-content: center;
+    justify-center: center;
     margin-top: 3rem;
+    flex-wrap: wrap;
 }
 .social-link {
     width: 80px;
@@ -524,15 +581,15 @@ footer {
     nav { padding: 1.5rem; }
     .nav-menu { display: none; }
     .social-links { flex-wrap: wrap; }
+    section { padding: 4rem 1.5rem; }
 }
 </style>
-</head>
 
 <nav>
-    <div class="logo">AS</div>
+    <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">AS</div>
     <ul class="nav-menu">
         <li><a href="#about">About</a></li>
-        <li><a href="#projects">Research</a></li>
+        <li><a href="#research">Research</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#skills">Skills</a></li>
@@ -572,32 +629,30 @@ footer {
     <p class="section-subtitle">Passionate about leveraging technology and data science to solve complex problems in finance and beyond</p>
     
     <div class="interest-grid">
+        <div class="interest-card">
+            <div class="interest-icon"></div>
+            <h3 class="interest-title">Artificial Intelligence</h3>
+            <p>Building intelligent systems that turn complex data into actionable insights, with a focus on real-world impact.</p>
+        </div>
 
-    <div class="interest-card">
-        <div class="interest-icon"></div>
-        <h3 class="interest-title">Artificial Intelligence</h3>
-        <p>Building intelligent systems that turn complex data into actionable insights, with a focus on real-world impact.</p>
+        <div class="interest-card">
+            <div class="interest-icon"></div>
+            <h3 class="interest-title">Machine Learning</h3>
+            <p>Designing predictive models and learning algorithms to uncover patterns and drive data-informed decisions.</p>
+        </div>
+
+        <div class="interest-card">
+            <div class="interest-icon"></div>
+            <h3 class="interest-title">Finance & Data Analysis</h3>
+            <p>Applying statistical modeling and analytics to understand markets, optimize strategies, and extract meaningful signals from data.</p>
+        </div>
+
+        <div class="interest-card">
+            <div class="interest-icon"></div>
+            <h3 class="interest-title">Algorithmic Trading</h3>
+            <p>Developing systematic trading strategies and backtesting pipelines to model market behavior through code.</p>
+        </div>
     </div>
-
-    <div class="interest-card">
-        <div class="interest-icon"></div>
-        <h3 class="interest-title">Machine Learning</h3>
-        <p>Designing predictive models and learning algorithms to uncover patterns and drive data-informed decisions.</p>
-    </div>
-
-    <div class="interest-card">
-        <div class="interest-icon"></div>
-        <h3 class="interest-title">Finance & Data Analysis</h3>
-        <p>Applying statistical modeling and analytics to understand markets, optimize strategies, and extract meaningful signals from data.</p>
-    </div>
-
-    <div class="interest-card">
-        <div class="interest-icon"></div>
-        <h3 class="interest-title">Algorithmic Trading</h3>
-        <p>Developing systematic trading strategies and backtesting pipelines to model market behavior through code.</p>
-    </div>
-
-</div>
 </section>
 
 <section id="research">
@@ -617,7 +672,6 @@ footer {
             <span class="skill-tag">Information Economics</span>
         </div>
     </div>
-
 </section>
 
 <section id="experience">
@@ -625,206 +679,258 @@ footer {
     
     <div class="experience-list">
         <div class="experience-card">
-            <h3 class="experience-title">Artificial Intelligence Intern</h3>
-            <div class="experience-company">Stealth AI Startup</div>
-            <div class="experience-date">Oct 2025 – Dec 2025 · 3 mos · San Francisco, CA (Remote)</div>
-            <p class="card-desc">
-                Built and optimized ML pipelines supporting data-driven decision systems. Ran end-to-end experiments across 
-                feature engineering, model training, and evaluation. Developed scalable inference components and integrated ML 
-                systems into production workflows. Contributed to model benchmarking and applied research.
-            </p>
-            <div class="tag-container">
-                <span class="skill-tag">Machine Learning</span>
-                <span class="skill-tag">PyTorch</span>
-                <span class="skill-tag">ML Pipelines</span>
+            <div class="experience-header">
+                <h3 class="experience-title">Artificial Intelligence Intern</h3>
+                <div class="experience-company">Stealth AI Startup</div>
+                <div class="experience-date">Oct 2025 – Dec 2025 · 3 mos · San Francisco, CA (Remote)</div>
+            </div>
+            <div class="experience-body">
+                <p class="card-desc">
+                    Built and optimized ML pipelines supporting data-driven decision systems. Ran end-to-end experiments across 
+                    feature engineering, model training, and evaluation. Developed scalable inference components and integrated ML 
+                    systems into production workflows. Contributed to model benchmarking and applied research.
+                </p>
+                <div class="tag-container">
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">ML Pipelines</span>
+                </div>
             </div>
         </div>
 
         <div class="experience-card">
-            <h3 class="experience-title">Financial Assistant</h3>
-            <div class="experience-company">UC San Diego</div>
-            <div class="experience-date">Sep 2024 – Present · 1 yr 6 mos · San Diego, CA</div>
-            <p class="card-desc">
-                Managed daily financial operations supporting 650+ student organizations with multi-million-dollar aggregate budgets. 
-                Performed budget reconciliation, variance analysis, and audit prep. Streamlined reimbursement and approval workflows 
-                using Oracle E-Business Suite and Concur.
-            </p>
-            <div class="tag-container">
-                <span class="skill-tag">Oracle APIs</span>
-                <span class="skill-tag">Concur</span>
-                <span class="skill-tag">Financial Analysis</span>
+            <div class="experience-header">
+                <h3 class="experience-title">Financial Assistant</h3>
+                <div class="experience-company">UC San Diego</div>
+                <div class="experience-date">Sep 2024 – Present · 1 yr 6 mos · San Diego, CA</div>
+            </div>
+            <div class="experience-body">
+                <p class="card-desc">
+                    Managed daily financial operations supporting 650+ student organizations with multi-million-dollar aggregate budgets. 
+                    Performed budget reconciliation, variance analysis, and audit prep. Streamlined reimbursement and approval workflows 
+                    using Oracle E-Business Suite and Concur.
+                </p>
+                <div class="tag-container">
+                    <span class="skill-tag">Oracle APIs</span>
+                    <span class="skill-tag">Concur</span>
+                    <span class="skill-tag">Financial Analysis</span>
+                </div>
             </div>
         </div>
 
         <div class="experience-card">
-            <h3 class="experience-title">Quant Trading Intern</h3>
-            <div class="experience-company">Limex</div>
-            <div class="experience-date">Jul 2025 – Aug 2025 · 2 mos · New York, NY</div>
-            <p class="card-desc">
-                Developed and evaluated quantitative trading strategies using Python and statistical modeling. Analyzed high-frequency 
-                market data to identify arbitrage and market-making opportunities. Worked on risk management, volatility estimation, 
-                and execution efficiency.
-            </p>
-            <div class="tag-container">
-                <span class="skill-tag">Quantitative Finance</span>
-                <span class="skill-tag">Risk Modeling</span>
-                <span class="skill-tag">Python</span>
+            <div class="experience-header">
+                <h3 class="experience-title">Quant Trading Intern</h3>
+                <div class="experience-company">Limex</div>
+                <div class="experience-date">Jul 2025 – Aug 2025 · 2 mos · New York, NY</div>
+            </div>
+            <div class="experience-body">
+                <p class="card-desc">
+                    Developed and evaluated quantitative trading strategies using Python and statistical modeling. Analyzed high-frequency 
+                    market data to identify arbitrage and market-making opportunities. Worked on risk management, volatility estimation, 
+                    and execution efficiency.
+                </p>
+                <div class="tag-container">
+                    <span class="skill-tag">Quantitative Finance</span>
+                    <span class="skill-tag">Risk Modeling</span>
+                    <span class="skill-tag">Python</span>
+                </div>
             </div>
         </div>
 
         <!-- Hidden experiences initially -->
-        <div class="experience-card hidden" id="more-experiences">
-            <h3 class="experience-title">Algorithmic Problem Solving Intern</h3>
-            <div class="experience-company">ICPC Foundation</div>
-            <div class="experience-date">Jan 2025 – Jun 2025 · 6 mos · Woodway, TX (Remote)</div>
-            <p class="card-desc">
-                Solved advanced problems in dynamic programming, graphs, and combinatorics. Peer-reviewed solutions and developed 
-                test cases for competitive programming education. Strengthened algorithmic reasoning through real contest-style workflows.
-            </p>
-            <div class="tag-container">
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">Java</span>
-                <span class="skill-tag">C++</span>
-                <span class="skill-tag">Algorithms</span>
+        <div class="experience-card hidden">
+            <div class="experience-header">
+                <h3 class="experience-title">Algorithmic Problem Solving Intern</h3>
+                <div class="experience-company">ICPC Foundation</div>
+                <div class="experience-date">Jan 2025 – Jun 2025 · 6 mos · Woodway, TX (Remote)</div>
+            </div>
+            <div class="experience-body">
+                <p class="card-desc">
+                    Solved advanced problems in dynamic programming, graphs, and combinatorics. Peer-reviewed solutions and developed 
+                    test cases for competitive programming education. Strengthened algorithmic reasoning through real contest-style workflows.
+                </p>
+                <div class="tag-container">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">Algorithms</span>
+                </div>
             </div>
         </div>
 
         <div class="experience-card hidden">
-            <h3 class="experience-title">Founder & CEO</h3>
-            <div class="experience-company">iHomeCure</div>
-            <div class="experience-date">Aug 2023 – May 2025 · 1 yr 10 mos · Bhopal, India</div>
-            <p class="card-desc">
-                Founded digital health startup delivering home diagnostics and affordable care solutions. Led platform development using 
-                Flask, Firebase, and Google Cloud. Managed cross-functional team of six. Designed ML-powered tools for personalized 
-                wellness tracking. Secured initial seed funding from local accelerators.
-            </p>
-            <div class="tag-container">
-                <span class="skill-tag">Leadership</span>
-                <span class="skill-tag">Product Development</span>
-                <span class="skill-tag">Flask</span>
-                <span class="skill-tag">GCP</span>
+            <div class="experience-header">
+                <h3 class="experience-title">Founder & CEO</h3>
+                <div class="experience-company">iHomeCure</div>
+                <div class="experience-date">Aug 2023 – May 2025 · 1 yr 10 mos · Bhopal, India</div>
+            </div>
+            <div class="experience-body">
+                <p class="card-desc">
+                    Founded digital health startup delivering home diagnostics and affordable care solutions. Led platform development using 
+                    Flask, Firebase, and Google Cloud. Managed cross-functional team of six. Designed ML-powered tools for personalized 
+                    wellness tracking. Secured initial seed funding from local accelerators.
+                </p>
+                <div class="tag-container">
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Product Development</span>
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">GCP</span>
+                </div>
             </div>
         </div>
 
         <div class="experience-card hidden">
-            <h3 class="experience-title">Undergraduate Research Assistant</h3>
-            <div class="experience-company">UC San Diego - Economics Department</div>
-            <div class="experience-date">Sep 2024 – Jun 2025 · 10 mos · San Diego, CA</div>
-            <p class="card-desc">
-                Conducted behavioral and macroeconomic research using large-scale datasets in Python, SQL, and Pandas. Built regression 
-                and econometric models to analyze labor markets, inequality, and policy impacts. Produced policy-focused visualizations 
-                using STATA and matplotlib.
-            </p>
-            <div class="tag-container">
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Applied Econometrics</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">STATA</span>
+            <div class="experience-header">
+                <h3 class="experience-title">Undergraduate Research Assistant</h3>
+                <div class="experience-company">UC San Diego - Economics Department</div>
+                <div class="experience-date">Sep 2024 – Jun 2025 · 10 mos · San Diego, CA</div>
+            </div>
+            <div class="experience-body">
+                <p class="card-desc">
+                    Conducted behavioral and macroeconomic research using large-scale datasets in Python, SQL, and Pandas. Built regression 
+                    and econometric models to analyze labor markets, inequality, and policy impacts. Produced policy-focused visualizations 
+                    using STATA and matplotlib.
+                </p>
+                <div class="tag-container">
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Applied Econometrics</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">STATA</span>
+                </div>
             </div>
         </div>
 
         <div class="experience-card hidden">
-            <h3 class="experience-title">Peer Mentor</h3>
-            <div class="experience-company">UC San Diego ISEO</div>
-            <div class="experience-date">Jul 2024 – Oct 2024 · 4 mos · San Diego, CA</div>
-            <p class="card-desc">
-                Mentored international students during transition to UCSD. Led weekly sessions covering cultural adjustment, academic 
-                resources, and immigration/visa requirements. Developed supportive peer community for ongoing engagement.
-            </p>
-            <div class="tag-container">
-                <span class="skill-tag">Mentorship</span>
-                <span class="skill-tag">Leadership</span>
+            <div class="experience-header">
+                <h3 class="experience-title">Peer Mentor</h3>
+                <div class="experience-company">UC San Diego ISEO</div>
+                <div class="experience-date">Jul 2024 – Oct 2024 · 4 mos · San Diego, CA</div>
+            </div>
+            <div class="experience-body">
+                <p class="card-desc">
+                    Mentored international students during transition to UCSD. Led weekly sessions covering cultural adjustment, academic 
+                    resources, and immigration/visa requirements. Developed supportive peer community for ongoing engagement.
+                </p>
+                <div class="tag-container">
+                    <span class="skill-tag">Mentorship</span>
+                    <span class="skill-tag">Leadership</span>
+                </div>
             </div>
         </div>
 
         <div class="experience-card hidden">
-            <h3 class="experience-title">Data Science Intern</h3>
-            <div class="experience-company">Kopykitab - Digibook Technologies</div>
-            <div class="experience-date">Jun 2024 – Sep 2024 · 4 mos · Bengaluru, India (Remote)</div>
-            <p class="card-desc">
-                Analyzed user behavior and content performance using SQL, Python, and Tableau. Built ML classification models to 
-                identify high-conversion categories. Supported database restructuring and pipeline optimization. Ran A/B tests to 
-                evaluate retention and monetization strategies.
-            </p>
-            <div class="tag-container">
-                <span class="skill-tag">Data Science</span>
-                <span class="skill-tag">SQL</span>
-                <span class="skill-tag">Python</span>
-                <span class="skill-tag">A/B Testing</span>
+            <div class="experience-header">
+                <h3 class="experience-title">Data Science Intern</h3>
+                <div class="experience-company">Kopykitab - Digibook Technologies</div>
+                <div class="experience-date">Jun 2024 – Sep 2024 · 4 mos · Bengaluru, India (Remote)</div>
+            </div>
+            <div class="experience-body">
+                <p class="card-desc">
+                    Analyzed user behavior and content performance using SQL, Python, and Tableau. Built ML classification models to 
+                    identify high-conversion categories. Supported database restructuring and pipeline optimization. Ran A/B tests to 
+                    evaluate retention and monetization strategies.
+                </p>
+                <div class="tag-container">
+                    <span class="skill-tag">Data Science</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">A/B Testing</span>
+                </div>
             </div>
         </div>
 
         <div class="experience-card hidden">
-            <h3 class="experience-title">Software Engineering Fellow</h3>
-            <div class="experience-company">Headstarter AI</div>
-            <div class="experience-date">Jul 2024 – Aug 2024 · 2 mos · San Francisco, CA</div>
-            <p class="card-desc">
-                Developed backend APIs using Flask and integrated with React.js interfaces. Built ML inference modules using PyTorch 
-                and NumPy. Deployed applications using AWS EC2 and S3. Optimized REST endpoints for performance.
-            </p>
-            <div class="tag-container">
-                <span class="skill-tag">Flask</span>
-                <span class="skill-tag">React.js</span>
-                <span class="skill-tag">PyTorch</span>
-                <span class="skill-tag">AWS</span>
+            <div class="experience-header">
+                <h3 class="experience-title">Software Engineering Fellow</h3>
+                <div class="experience-company">Headstarter AI</div>
+                <div class="experience-date">Jul 2024 – Aug 2024 · 2 mos · San Francisco, CA</div>
+            </div>
+            <div class="experience-body">
+                <p class="card-desc">
+                    Developed backend APIs using Flask and integrated with React.js interfaces. Built ML inference modules using PyTorch 
+                    and NumPy. Deployed applications using AWS EC2 and S3. Optimized REST endpoints for performance.
+                </p>
+                <div class="tag-container">
+                    <span class="skill-tag">Flask</span>
+                    <span class="skill-tag">React.js</span>
+                    <span class="skill-tag">PyTorch</span>
+                    <span class="skill-tag">AWS</span>
+                </div>
             </div>
         </div>
 
         <div class="experience-card hidden">
-            <h3 class="experience-title">Orientation Leader</h3>
-            <div class="experience-company">UC San Diego - Seventh College</div>
-            <div class="experience-date">Mar 2024 – Sep 2024 · 7 mos · San Diego, CA</div>
-            <p class="card-desc">
-                Led onboarding for 500+ incoming students, improving engagement and first-year retention. Delivered presentations on 
-                academic planning and campus resources. Coordinated peer mentors and facilitated group activities.
-            </p>
-            <div class="tag-container">
-                <span class="skill-tag">Leadership</span>
-                <span class="skill-tag">Public Speaking</span>
+            <div class="experience-header">
+                <h3 class="experience-title">Orientation Leader</h3>
+                <div class="experience-company">UC San Diego - Seventh College</div>
+                <div class="experience-date">Mar 2024 – Sep 2024 · 7 mos · San Diego, CA</div>
+            </div>
+            <div class="experience-body">
+                <p class="card-desc">
+                    Led onboarding for 500+ incoming students, improving engagement and first-year retention. Delivered presentations on 
+                    academic planning and campus resources. Coordinated peer mentors and facilitated group activities.
+                </p>
+                <div class="tag-container">
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Public Speaking</span>
+                </div>
             </div>
         </div>
 
         <div class="experience-card hidden">
-            <h3 class="experience-title">Project Intern</h3>
-            <div class="experience-company">6DegreesIT Pvt Ltd</div>
-            <div class="experience-date">Feb 2022 – Jun 2022 · 5 mos</div>
-            <p class="card-desc">
-                Built responsive front-end components using React.js, HTML, and Tailwind CSS. Worked closely with backend teams to 
-                integrate APIs into client-facing dashboards. Developed clean UI layouts.
-            </p>
-            <div class="tag-container">
-                <span class="skill-tag">React.js</span>
-                <span class="skill-tag">Tailwind CSS</span>
-                <span class="skill-tag">API Integration</span>
+            <div class="experience-header">
+                <h3 class="experience-title">Project Intern</h3>
+                <div class="experience-company">6DegreesIT Pvt Ltd</div>
+                <div class="experience-date">Feb 2022 – Jun 2022 · 5 mos</div>
+            </div>
+            <div class="experience-body">
+                <p class="card-desc">
+                    Built responsive front-end components using React.js, HTML, and Tailwind CSS. Worked closely with backend teams to 
+                    integrate APIs into client-facing dashboards. Developed clean UI layouts.
+                </p>
+                <div class="tag-container">
+                    <span class="skill-tag">React.js</span>
+                    <span class="skill-tag">Tailwind CSS</span>
+                    <span class="skill-tag">API Integration</span>
+                </div>
             </div>
         </div>
 
         <div class="experience-card hidden">
-            <h3 class="experience-title">R&D Intern</h3>
-            <div class="experience-company">Inline Medicare</div>
-            <div class="experience-date">Apr 2021 – May 2021 · 2 mos · Bhopal, India</div>
-            <p class="card-desc">
-                Engineered automated electrical Labor Table with manual override capability. Worked on mechanical design and 
-                software logic using AutoCAD and C.
-            </p>
-            <div class="tag-container">
-                <span class="skill-tag">AutoCAD</span>
-                <span class="skill-tag">C Programming</span>
-                <span class="skill-tag">ROS</span>
+            <div class="experience-header">
+                <h3 class="experience-title">R&D Intern</h3>
+                <div class="experience-company">Inline Medicare</div>
+                <div class="experience-date">Apr 2021 – May 2021 · 2 mos · Bhopal, India</div>
+            </div>
+            <div class="experience-body">
+                <p class="card-desc">
+                    Engineered automated electrical Labor Table with manual override capability. Worked on mechanical design and 
+                    software logic using AutoCAD and C.
+                </p>
+                <div class="tag-container">
+                    <span class="skill-tag">AutoCAD</span>
+                    <span class="skill-tag">C Programming</span>
+                    <span class="skill-tag">ROS</span>
+                </div>
             </div>
         </div>
 
         <div class="experience-card hidden">
-            <h3 class="experience-title">Intern</h3>
-            <div class="experience-company">Government of Madhya Pradesh</div>
-            <div class="experience-date">Apr 2020 – Nov 2020 · 8 mos · Bhopal, India (Remote)</div>
-            <p class="card-desc">
-                Volunteered during COVID-19 pandemic to support logistical planning for ICU beds and hospital equipment installations. 
-                Mapped region-specific needs using field data. Assisted in emergency supply chain strategies.
-            </p>
-            <div class="tag-container">
-                <span class="skill-tag">COVID-19 Response</span>
-                <span class="skill-tag">Supply Chain</span>
+            <div class="experience-header">
+                <h3 class="experience-title">Intern</h3>
+                <div class="experience-company">Government of Madhya Pradesh</div>
+                <div class="experience-date">Apr 2020 – Nov 2020 · 8 mos · Bhopal, India (Remote)</div>
+            </div>
+            <div class="experience-body">
+                <p class="card-desc">
+                    Volunteered during COVID-19 pandemic to support logistical planning for ICU beds and hospital equipment installations. 
+                    Mapped region-specific needs using field data. Assisted in emergency supply chain strategies.
+                </p>
+                <div class="tag-container">
+                    <span class="skill-tag">COVID-19 Response</span>
+                    <span class="skill-tag">Supply Chain</span>
+                </div>
             </div>
         </div>
     </div>
@@ -852,7 +958,6 @@ footer {
                 </div>
                 <div class="project-links">
                     <a href="https://github.com/anuyaya27/Prism" target="_blank" class="project-link">GitHub →</a>
-
                 </div>
             </div>
         </div>
@@ -1022,6 +1127,7 @@ footer {
 </footer>
 
 <script>
+// Smooth scroll
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -1031,6 +1137,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Toggle experiences
+let experiencesExpanded = false;
+function toggleExperiences() {
+    const hiddenExperiences = document.querySelectorAll('.experience-card.hidden');
+    const btn = document.querySelector('.show-all-btn');
+    
+    experiencesExpanded = !experiencesExpanded;
+    
+    hiddenExperiences.forEach(exp => {
+        exp.classList.toggle('hidden');
+    });
+    
+    btn.textContent = experiencesExpanded ? 'Show Less' : 'Show All Experiences';
+    
+    if (!experiencesExpanded) {
+        document.querySelector('#experience').scrollIntoView({ behavior: 'smooth' });
+    }
+}
 </script>
 
 </body>
