@@ -25,16 +25,47 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"><canvas id="heroCanvas"></canvas></div>
-  <div class="hero-content">
-    <h1>
-      Quantifying<br>
-      <span class="line2">market </span><span class="em">signals</span>
-    </h1>
-    <p class="hero-desc">Building at the intersection of quantitative methods, machine learning, and financial systems. B.S. Mathematics-CS & B.A. Economics, UC San Diego 2026.</p>
-    <div class="hero-actions">
-      <a href="https://drive.google.com/file/d/1p6SOy2gdvvgJJOHQ69YrnRemIzV_vcbr/view" target="_blank" class="btn primary">Resume</a>
-      <a href="https://drive.google.com/file/d/1_OA_DaWomvfMUJvULG9x9If43yq42KiN/view" target="_blank" class="btn">Research Paper</a>
-      <a href="https://github.com/anuyaya27" target="_blank" class="btn">GitHub</a>
+  <div class="hero-split">
+    <div class="hero-content">
+      <h1>
+        Quantifying<br>
+        <span class="line2">market </span><span class="em">signals</span>
+      </h1>
+      <p><b>B.S. Mathematics-CS & B.A. Economics, UC San Diego 2026.</b></p>
+      <p class="hero-desc">Building at the intersection of quantitative methods, machine learning, and financial systems. </p>
+      <p></p>
+      <div class="hero-actions">
+        <a href="https://drive.google.com/file/d/1p6SOy2gdvvgJJOHQ69YrnRemIzV_vcbr/view" target="_blank" class="btn primary">Resume</a>
+        <a href="https://drive.google.com/file/d/1_OA_DaWomvfMUJvULG9x9If43yq42KiN/view" target="_blank" class="btn">Research Paper</a>
+        <a href="https://github.com/anuyaya27" target="_blank" class="btn">GitHub</a>
+      </div>
+    </div>
+    <div class="hero-orderbook" id="heroOrderbook">
+      <div class="ob-header">
+        <span class="ob-title-label">ANANYA.SD</span>
+        <span class="ob-live"><span class="ob-pulse"></span>Live</span>
+      </div>
+      <div class="ob-spread">
+        <span class="ob-spread-label">Spread</span>
+        <span class="ob-spread-val" id="obSpread">1.2</span>
+      </div>
+      <div class="ob-columns">
+        <div class="ob-col">
+          <div class="ob-col-head">
+            <span>Skill</span><span>Bid</span><span>Size</span>
+          </div>
+          <div class="ob-rows" id="obBids"></div>
+        </div>
+        <div class="ob-col">
+          <div class="ob-col-head">
+            <span>Skill</span><span>Ask</span><span>Size</span>
+          </div>
+          <div class="ob-rows" id="obAsks"></div>
+        </div>
+      </div>
+      <div class="ob-footer">
+        <span>Last update: <span id="obTime">00:00:00</span></span>
+      </div>
     </div>
   </div>
   <div class="hero-scroll">Scroll</div>
@@ -63,26 +94,6 @@
     <span>Pandas</span>
     <span>NumPy</span>
     <span><span class="dot"></span> <b>Statistical Modeling</b></span>
-  </div>
-</div>
-
-<!-- STATS -->
-<div class="stats-bar rv">
-  <div class="stat-cell">
-    <div class="stat-num" data-target="6">0</div>
-    <div class="stat-label">Projects shipped</div>
-  </div>
-  <div class="stat-cell">
-    <div class="stat-num" data-target="7">0</div>
-    <div class="stat-label">Professional roles</div>
-  </div>
-  <div class="stat-cell">
-    <div class="stat-num" data-target="2">0</div>
-    <div class="stat-label">Degrees (dual)</div>
-  </div>
-  <div class="stat-cell">
-    <div class="stat-num" data-target="3">0</div>
-    <div class="stat-label">Certifications</div>
   </div>
 </div>
 
@@ -205,19 +216,9 @@
       <div class="exp-loc">Woodway, TX</div>
     </div>
     <div class="exp-row rv">
-      <div class="exp-date">Sep 2024 — Present</div>
-      <div><div class="exp-role">Financial Assistant</div><div class="exp-org">UC San Diego</div></div>
-      <div class="exp-loc">San Diego, CA</div>
-    </div>
-    <div class="exp-row rv">
       <div class="exp-date">Jun — Sep 2024</div>
       <div><div class="exp-role">Data Science Intern</div><div class="exp-org">KopyKitab — Digibook Technologies</div></div>
       <div class="exp-loc">Bengaluru, India</div>
-    </div>
-    <div class="exp-row rv">
-      <div class="exp-date">Feb — Jun 2022</div>
-      <div><div class="exp-role">Intern</div><div class="exp-org">6DegreesIT Pvt Ltd</div></div>
-      <div class="exp-loc">Indore, India</div>
     </div>
   </div>
 </section>
@@ -229,7 +230,7 @@
   <div class="sec-header rv">
     <div>
       <div class="sec-num">05 — Peak detections</div>
-      <div class="sec-title">Projects</div>
+      <div class="sec-title">Selected Projects</div>
     </div>
     <div class="sec-subtitle">Notable outputs that crossed the detection threshold.</div>
   </div>
@@ -255,26 +256,6 @@
       <p>Interactive economic policy impact simulation. Tested by UCSD Economics Department.</p>
       <div class="p-tags"><span class="p-tag">Python</span><span class="p-tag">Streamlit</span><span class="p-tag">Data Science</span></div>
     </div>
-    <div class="proj">
-      <span class="p-num">04</span>
-      <h3>NeoCred</h3>
-      <p>Alternative credit scoring via non-traditional signals. +20% classification accuracy.</p>
-      <div class="p-tags"><span class="p-tag">Flask</span><span class="p-tag">ML</span><span class="p-tag">APIs</span></div>
-      <a href="https://github.com/anuyaya27/NeoCred" target="_blank" class="p-link">GitHub</a>
-    </div>
-    <div class="proj">
-      <span class="p-num">05</span>
-      <h3>Emocia</h3>
-      <p>Real-time facial emoji mapping using CNN pipelines for human-AI interaction.</p>
-      <div class="p-tags"><span class="p-tag">TensorFlow</span><span class="p-tag">PyTorch</span><span class="p-tag">OpenCV</span></div>
-      <a href="https://github.com/anuyaya27/Emocia" target="_blank" class="p-link">GitHub</a>
-    </div>
-    <div class="proj">
-      <span class="p-num">06</span>
-      <h3>iHomeCure</h3>
-      <p>Founded digital health startup for home diagnostics in Tier-2 Indian cities.</p>
-      <div class="p-tags"><span class="p-tag">Flask</span><span class="p-tag">Firebase</span><span class="p-tag">GCP</span></div>
-    </div>
   </div>
 </section>
 
@@ -293,15 +274,14 @@
       <div class="cc-label">Email</div>
       <div class="cc-val">27ananyasaxena@gmail.com</div>
     </a>
-    <a href="https://drive.google.com/file/d/1p6SOy2gdvvgJJOHQ69YrnRemIzV_vcbr/view" target="_blank" class="contact-card">
-      <div class="cc-label">Resume</div>
-      <div class="cc-val">View PDF</div>
-      <div class="cc-sub">Download latest version</div>
+    <a href="https://www.linkedin.com/in/a3saxena/" target="_blank" class="contact-card">
+      <div class="cc-label">LinkedIn</div>
+      <div class="cc-val">Connect with me!</div>
     </a>
+    
     <a href="https://github.com/anuyaya27" target="_blank" class="contact-card">
       <div class="cc-label">GitHub</div>
       <div class="cc-val">anuyaya27</div>
-      <div class="cc-sub">Open source projects</div>
     </a>
   </div>
 </section>
@@ -425,6 +405,74 @@ window.addEventListener('scroll',()=>{
   let cur='';secs.forEach(s=>{if(scrollY>=s.offsetTop-100)cur=s.id});
   navLinks.forEach(a=>{a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
 });
+
+// ===== HERO ORDER BOOK =====
+(function(){
+  const bids=[
+    {skill:'Python',price:95.2,size:48},
+    {skill:'Quant Fin',price:88.4,size:35},
+    {skill:'SQL',price:90.0,size:42},
+    {skill:'Stat Model',price:88.0,size:38},
+    {skill:'PySpark',price:85.5,size:30},
+    {skill:'Backtest',price:83.6,size:28},
+    {skill:'TensorFlow',price:82.0,size:25},
+  ];
+  const asks=[
+    {skill:'Risk Model',price:80.1,size:22},
+    {skill:'PyTorch',price:82.0,size:26},
+    {skill:'AWS',price:78.0,size:20},
+    {skill:'GCP',price:78.5,size:18},
+    {skill:'Airflow',price:85.0,size:32},
+    {skill:'Docker',price:76.0,size:15},
+    {skill:'React',price:75.3,size:14},
+  ];
+
+  const bidEl=document.getElementById('obBids');
+  const askEl=document.getElementById('obAsks');
+  const spreadEl=document.getElementById('obSpread');
+  const timeEl=document.getElementById('obTime');
+
+  function makeRow(item,type){
+    const maxSize=50;
+    const pct=(item.size/maxSize)*100;
+    const color=type==='bid'?'rgba(14,203,129,':'rgba(200,90,42,';
+    return `<div class="ob-row-data">
+      <div class="ob-row-bg" style="width:${pct}%;background:${color}0.08)"></div>
+      <span class="ob-cell">${item.skill}</span>
+      <span class="ob-cell ob-price" style="color:${color}1)">${item.price.toFixed(1)}</span>
+      <span class="ob-cell ob-size">${item.size}</span>
+    </div>`;
+  }
+
+  function render(){
+    bidEl.innerHTML=bids.map(b=>makeRow(b,'bid')).join('');
+    askEl.innerHTML=asks.map(a=>makeRow(a,'ask')).join('');
+  }
+
+  function tick(){
+    bids.forEach(b=>{
+      b.price+=(Math.random()-0.4)*0.3;
+      b.price=Math.max(70,Math.min(99,b.price));
+      b.size=Math.max(5,Math.min(50,b.size+Math.floor((Math.random()-0.45)*3)));
+    });
+    asks.forEach(a=>{
+      a.price+=(Math.random()-0.4)*0.3;
+      a.price=Math.max(65,Math.min(95,a.price));
+      a.size=Math.max(5,Math.min(50,a.size+Math.floor((Math.random()-0.45)*3)));
+    });
+    bids.sort((a,b)=>b.price-a.price);
+    asks.sort((a,b)=>a.price-b.price);
+    const sp=Math.abs(bids[0].price-asks[0].price);
+    spreadEl.textContent=sp.toFixed(1);
+    const now=new Date();
+    timeEl.textContent=now.toLocaleTimeString('en-US',{hour12:false});
+    render();
+  }
+
+  render();
+  tick();
+  setInterval(tick,2000);
+})();
 </script>
 </body>
 </html>
