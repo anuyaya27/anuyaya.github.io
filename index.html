@@ -1,437 +1,430 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ananya Saxxena</title>
-
-  <link rel="icon" type="image/png" href="/favicon.png" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Work+Sans:wght@300;400;600;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
-  <link rel="stylesheet" href="styles.css" />
-
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ananya Saxena</title>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&family=Sora:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <nav>
-    
-    <div class="logo" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">AS</div>
-    
-    <ul class="nav-menu">
-      <li><a href="#about">About</a></li>
-      <li><a href="#research">Research</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-    <a href="https://drive.google.com/file/d/1p6SOy2gdvvgJJOHQ69YrnRemIzV_vcbr/view?usp=sharing" target="_blank" class="resume-btn">Resume</a>
-  </nav>
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-brand">Ananya Saxena</div>
+  <div class="nav-links">
+    <a href="#signal" class="on">Signal</a>
+    <a href="#bands">Bands</a>
+    <a href="#research">Research</a>
+    <a href="#positions">Positions</a>
+    <a href="#projects">Projects</a>
+  </div>
+  <a href="mailto:27ananyasaxena@gmail.com" class="nav-cta">Contact</a>
+</nav>
 
-  <section class="hero">
-    <div class="hero-left">
-      <h1 class="hero-title">
-        <span class="first-name">Ananya</span>
-        <span class="last-name">Saxxena</span>
-      </h1>
-      <p class="hero-description">
-        Quant-minded builder at the intersection of technology, finance, and data.
-      </p>
-      <div class="hero-tags">
-        <span class="tag">B.S. Mathematics-CS</span>
-        <span class="tag">B.A. Economics</span>
-        <span class="tag">UC San Diego</span>
-      </div>
-      <div class="hero-cta">
-        <a href="#experience" class="btn btn-primary">View Work</a>
-        <a href="#contact" class="btn btn-secondary">Contact</a>
-      </div>
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"><canvas id="heroCanvas"></canvas></div>
+  <div class="hero-content">
+    <h1>
+      Quantifying<br>
+      <span class="line2">market </span><span class="em">signals</span>
+    </h1>
+    <p class="hero-desc">Building at the intersection of quantitative methods, machine learning, and financial systems. B.S. Mathematics-CS & B.A. Economics, UC San Diego 2026.</p>
+    <div class="hero-actions">
+      <a href="https://drive.google.com/file/d/1p6SOy2gdvvgJJOHQ69YrnRemIzV_vcbr/view" target="_blank" class="btn primary">Resume</a>
+      <a href="https://drive.google.com/file/d/1_OA_DaWomvfMUJvULG9x9If43yq42KiN/view" target="_blank" class="btn">Research Paper</a>
+      <a href="https://github.com/anuyaya27" target="_blank" class="btn">GitHub</a>
     </div>
-    <div class="hero-right">
-      <div class="shape circle"></div>
-      <div class="shape square"></div>
-      <div class="shape triangle"></div>
-    </div>
-  </section>
+  </div>
+  <div class="hero-scroll">Scroll</div>
+</section>
 
-  <section id="about">
-    <h2 class="section-title">ABOUT</h2>
-    <p class="section-subtitle">Passionate about leveraging technology and data science to solve complex problems in finance and beyond</p>
+<!-- TICKER -->
+<div class="ticker-strip">
+  <div class="ticker-track" id="tickerTrack">
+    <span><span class="dot"></span> <b>Python</b></span>
+    <span>SQL</span>
+    <span>PySpark</span>
+    <span><b>Quantitative Finance</b></span>
+    <span>TensorFlow</span>
+    <span>PyTorch</span>
+    <span><span class="dot"></span> <b>Backtesting Systems</b></span>
+    <span>AWS</span>
+    <span>GCP</span>
+    <span>Airflow</span>
+    <span><b>Risk Modeling</b></span>
+    <span>Docker</span>
+    <span><span class="dot"></span> <b>Market Microstructure</b></span>
+    <span>FastAPI</span>
+    <span>Options Pricing</span>
+    <span>React</span>
+    <span><b>Trading Strategy</b></span>
+    <span>Pandas</span>
+    <span>NumPy</span>
+    <span><span class="dot"></span> <b>Statistical Modeling</b></span>
+  </div>
+</div>
 
-    <div class="interest-grid">
-      <div class="interest-card">
-        <div class="interest-icon"></div>
-        <h3 class="interest-title">Artificial Intelligence</h3>
-        <p>Building intelligent systems that turn complex data into actionable insights, with a focus on real-world impact.</p>
-      </div>
+<!-- STATS -->
+<div class="stats-bar rv">
+  <div class="stat-cell">
+    <div class="stat-num" data-target="6">0</div>
+    <div class="stat-label">Projects shipped</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num" data-target="7">0</div>
+    <div class="stat-label">Professional roles</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num" data-target="2">0</div>
+    <div class="stat-label">Degrees (dual)</div>
+  </div>
+  <div class="stat-cell">
+    <div class="stat-num" data-target="3">0</div>
+    <div class="stat-label">Certifications</div>
+  </div>
+</div>
 
-      <div class="interest-card">
-        <div class="interest-icon"></div>
-        <h3 class="interest-title">Machine Learning</h3>
-        <p>Designing predictive models and learning algorithms to uncover patterns and drive data-informed decisions.</p>
-      </div>
-
-      <div class="interest-card">
-        <div class="interest-icon"></div>
-        <h3 class="interest-title">Finance & Data Analysis</h3>
-        <p>Applying statistical modeling and analytics to understand markets, optimize strategies, and extract meaningful signals from data.</p>
-      </div>
-
-      <div class="interest-card">
-        <div class="interest-icon"></div>
-        <h3 class="interest-title">Algorithmic Trading</h3>
-        <p>Developing systematic trading strategies and backtesting pipelines to model market behavior through code.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="research">
-    <h2 class="section-title">RESEARCH</h2>
-
-    <div class="research-card">
-      <span class="status-badge">ONGOING</span>
-      <h3 class="card-title">Information & Strategic Behavior in Markets</h3>
-      <p class="card-desc">
-        Investigating how information asymmetries and strategic interactions between market participants
-        influence price discovery, trading patterns, and market efficiency in modern financial markets.
-      </p>
-      <a href="https://drive.google.com/file/d/1_OA_DaWomvfMUJvULG9x9If43yq42KiN/view?usp=drive_link" target="_blank" class="project-link">Working Paper →</a>
-      <div class="tag-container">
-        <span class="skill-tag">Market Microstructure</span>
-        <span class="skill-tag">Game Theory</span>
-        <span class="skill-tag">Information Economics</span>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience">
-    <h2 class="section-title">EXPERIENCE</h2>
-
-    <div class="experience-list">
-      <div class="experience-card">
-        <div class="experience-header">
-          <h3 class="experience-title">Artificial Intelligence Intern</h3>
-          <div class="experience-company">Stealth AI Startup</div>
-          <div class="experience-date">Oct 2025 – Dec 2025 · 3 mos · San Francisco, CA (Remote)</div>
-        </div>
-      </div>
-
-      <div class="experience-card">
-        <div class="experience-header">
-          <h3 class="experience-title">Financial Assistant</h3>
-          <div class="experience-company">UC San Diego</div>
-          <div class="experience-date">Sep 2024 – Present · 1 yr 6 mos · San Diego, CA</div>
-        </div>
-      </div>
-
-      <div class="experience-card">
-        <div class="experience-header">
-          <h3 class="experience-title">Quant Trading Intern</h3>
-          <div class="experience-company">Limex</div>
-          <div class="experience-date">Jul 2025 – Aug 2025 · 2 mos · New York, NY</div>
-        </div>
-      </div>
-
-      <!-- Hidden experiences initially -->
-      <div class="experience-card hidden">
-        <div class="experience-header">
-          <h3 class="experience-title">Algorithmic Problem Solving Intern</h3>
-          <div class="experience-company">ICPC Foundation</div>
-          <div class="experience-date">Jan 2025 – Jun 2025 · 6 mos · Woodway, TX (Remote)</div>
-        </div>
-      </div>
-
-
-      <div class="experience-card hidden">
-        <div class="experience-header">
-          <h3 class="experience-title">Undergraduate Research Assistant</h3>
-          <div class="experience-company">UC San Diego - Economics Department</div>
-          <div class="experience-date">Sep 2024 – Jun 2025 · 10 mos · San Diego, CA</div>
-        </div>
-
-      </div>
-
-      <div class="experience-card hidden">
-        <div class="experience-header">
-          <h3 class="experience-title">Data Science Intern</h3>
-          <div class="experience-company">Kopykitab - Digibook Technologies</div>
-          <div class="experience-date">Jun 2024 – Sep 2024 · 4 mos · Bengaluru, India (Remote)</div>
-        </div>
-        
-      </div>
-
-      <div class="experience-card hidden">
-        <div class="experience-header">
-          <h3 class="experience-title">Intern</h3>
-          <div class="experience-company">6DegreesIT Pvt Ltd</div>
-          <div class="experience-date">Feb 2022 – Jun 2022 · 5 mos</div>
-        </div>
-        
-      </div>
-      
-    <button class="show-all-btn" onclick="toggleExperiences()">Show All Experiences</button>
-  </section>
-
-  <section id="projects">
-    <h2 class="section-title">PROJECTS</h2>
-
-    <div class="projects-grid">
-      <div class="project-card">
-        <div class="project-header">01</div>
-        <div class="project-body">
-          <h3 class="card-title">PRISM</h3>
-          <div class="card-subtitle">In Development</div>
-          <p class="card-desc">
-            A parallel LLM orchestration system that asynchronously evaluates multiple models and synthesizes their reasoning into higher-quality outputs. Designed for scalable experimentation and automated model benchmarking.
-          </p>
-          <div class="tag-container">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Concurrent LLM execution</span>
-            <span class="skill-tag">Reasoning synthesis</span>
-            <span class="skill-tag">Model benchmarking</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/anuyaya27/Prism" target="_blank" class="project-link">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">02</div>
-        <div class="project-body">
-          <h3 class="card-title">WattsUp</h3>
-          <div class="card-subtitle">2nd Best Overall - HackPrinceton</div>
-          <p class="card-desc">
-            A computer vision platform that evaluates rooftop solar potential using satellite imagery and NASA climate data, enabling large-scale feasibility analysis across 10K+ square miles.
-          </p>
-          <div class="tag-container">
-            <span class="skill-tag">Machine Learning</span>
-            <span class="skill-tag">Computer Vision</span>
-            <span class="skill-tag">Climate Data Integration</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/deepanshgandhi/Watts-Up" target="_blank" class="project-link">GitHub →</a>
-            <a href="https://devpost.com/software/watt-s-up" target="_blank" class="project-link">Devpost →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">03</div>
-        <div class="project-body">
-          <h3 class="card-title">EcoSim360</h3>
-          <div class="card-subtitle">Economic Policy</div>
-          <p class="card-desc">
-            Interactive simulation platform modeling economic policy impacts. Being tested by UCSD Economics Department.
-          </p>
-          <div class="tag-container">
-            <span class="skill-tag">Python</span>
-            <span class="skill-tag">Streamlit</span>
-            <span class="skill-tag">Data Science</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">04</div>
-        <div class="project-body">
-          <h3 class="card-title">NeoCred</h3>
-          <div class="card-subtitle">Fintech</div>
-          <p class="card-desc">
-            Alternative credit scoring using non-traditional signals. 20% improvement in classification accuracy.
-          </p>
-          <div class="tag-container">
-            <span class="skill-tag">Flask</span>
-            <span class="skill-tag">ML</span>
-            <span class="skill-tag">APIs</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/anuyaya27/NeoCred" target="_blank" class="project-link">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">05</div>
-        <div class="project-body">
-          <h3 class="card-title">Emocia</h3>
-          <div class="card-subtitle">Computer Vision</div>
-          <p class="card-desc">
-            Real-time facial emoji mapping using CNN pipelines and deep learning for human-AI interaction.
-          </p>
-          <div class="tag-container">
-            <span class="skill-tag">TensorFlow</span>
-            <span class="skill-tag">PyTorch</span>
-            <span class="skill-tag">OpenCV</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/anuyaya27/Emocia" target="_blank" class="project-link">GitHub →</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="project-card">
-        <div class="project-header">06</div>
-        <div class="project-body">
-          <h3 class="card-title">iHomeCure</h3>
-          <div class="card-subtitle">Healthcare Startup</div>
-          <p class="card-desc">
-            Founded digital health startup delivering home diagnostics and affordable care for Tier-2 Indian cities.
-          </p>
-          <div class="tag-container">
-            <span class="skill-tag">Flask</span>
-            <span class="skill-tag">Firebase</span>
-            <span class="skill-tag">GCP</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="skills">
-    <h2 class="section-title">SKILLS</h2>
-
-    <div class="skills-grid">
-      <div class="skill-category">
-        <h3>Programming</h3>
-        <div class="skill-list">
-          <span class="skill-item">Java</span>
-          <span class="skill-item">Python</span>
-          <span class="skill-item">JavaScript</span>
-          <span class="skill-item">TypeScript</span>
-          <span class="skill-item">React</span>
-          <span class="skill-item">R</span>
-          <span class="skill-item">C</span>
-          <span class="skill-item">SQL</span>
-          <span class="skill-item">C++</span>
-          <span class="skill-item">HTML</span>
-          <span class="skill-item">CSS</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Data & Cloud</h3>
-        <div class="skill-list">
-          <span class="skill-item">AWS</span>
-          <span class="skill-item">GCP</span>
-          <span class="skill-item">TensorFlow</span>
-          <span class="skill-item">PyTorch</span>
-          <span class="skill-item">Pandas</span>
-          <span class="skill-item">NumPy</span>
-          <span class="skill-item">PySpark</span>
-          <span class="skill-item">Scikit-learn</span>
-          <span class="skill-item">Docker</span>
-          <span class="skill-item">Matplotlib</span>
-          <span class="skill-item">OpenCV</span>
-          <span class="skill-item">FastAPI</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Core Competencies</h3>
-        <div class="skill-list">
-          <span class="skill-item">Full-Stack Dev</span>
-          <span class="skill-item">A/B Testing</span>
-          <span class="skill-item">ETL</span>
-          <span class="skill-item">Statistical Modeling</span>
-          <span class="skill-item">Quantitative Finance</span>
-          <span class="skill-item">Backtesting</span>
-          <span class="skill-item">Trading Strategy Research</span>
-          <span class="skill-item">Risk Modeling</span>
-          <span class="skill-item">Financial Modeling</span>
-          <span class="skill-item">Credit Analysis</span>
-          <span class="skill-item">Market Data Pipelines</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Frameworks & Tools</h3>
-        <div class="skill-list">
-          <span class="skill-item">Flask</span>
-          <span class="skill-item">Fast API</span>
-          <span class="skill-item">Git</span>
-          <span class="skill-item">REST APIs</span>
-          <span class="skill-item">Tableau</span>
-          <span class="skill-item">Backtesting</span>
-          <span class="skill-item">Oracle E-Business Suite</span>
-          <span class="skill-item">Agile</span>
-        </div>
-      </div>
-
-      <div class="skill-category">
-        <h3>Certifications</h3>
-        <div class="skill-list">
-          <span class="skill-item">Options 101 - Akuna</span>
-          <span class="skill-item">Finance & Quant - UPenn</span>
-          <span class="skill-item">Python DS - UIUC</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
+<!-- SIGNAL -->
+<section class="sec" id="signal">
+  <div class="sec-header rv">
     <div>
-      <h2>LET'S WORK<br>TOGETHER</h2>
-      <p class="contact-subtext">
-        Ready to build something exceptional? Get in touch.
-      </p>
-
-      <a href="mailto:27ananyasaxena@gmail.com" class="btn btn-primary btn-contact">
-        Send Message
-      </a>
-
-      <div class="social-links">
-        <a href="https://github.com/anuyaya27" class="social-link" target="_blank" aria-label="GitHub">
-          <i class="fa-brands fa-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/a3saxena/" class="social-link" target="_blank" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-        <a href="mailto:27ananyasaxena@gmail.com" class="social-link" aria-label="Email">
-          <i class="fa-solid fa-envelope"></i>
-        </a>
-      </div>
+      <div class="sec-num">01 — Signal</div>
+      <div class="sec-title">Career trajectory</div>
     </div>
-  </section>
+    <div class="sec-subtitle">Amplitude over time. Each node marks a discrete event in the career signal.</div>
+  </div>
+  <canvas id="signalCanvas" class="rv"></canvas>
+  <div class="sig-legend rv">
+    <span><span class="sig-dot" style="background:#c85a2a"></span> Quant / data</span>
+    <span><span class="sig-dot" style="background:#5b8def"></span> AI / ML</span>
+    <span><span class="sig-dot" style="background:#2dd4a8"></span> Research / academic</span>
+  </div>
+</section>
 
-  <footer>
-    <p>Thanks for visiting my portfolio!</p>
-  </footer>
+<div class="divider"></div>
 
-  <script>
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
-      });
+<!-- BANDS -->
+<section class="sec" id="bands">
+  <div class="sec-header rv">
+    <div>
+      <div class="sec-num">02 — Frequency bands</div>
+      <div class="sec-title">Core competencies</div>
+    </div>
+    <div class="sec-subtitle">The signal decomposed into three primary frequency bands.</div>
+  </div>
+  <div class="band-list">
+    <div class="band rv">
+      <div class="band-num">01</div>
+      <div>
+        <h3>Mathematics & Probability</h3>
+        <p>Stochastic calculus, martingale theory, statistical learning, econometrics, linear algebra, convex optimization, real analysis, abstract algebra</p>
+      </div>
+      <div class="band-bars" data-color="#2dd4a8"></div>
+    </div>
+    <div class="band rv">
+      <div class="band-num">02</div>
+      <div>
+        <h3>Systems & ML</h3>
+        <p>Python, PySpark, Airflow, SQL, AWS, GCP, TensorFlow, PyTorch, Docker, FastAPI, Scikit-learn, Pandas, NumPy</p>
+      </div>
+      <div class="band-bars" data-color="#5b8def"></div>
+    </div>
+    <div class="band rv">
+      <div class="band-num">03</div>
+      <div>
+        <h3>Quantitative Finance</h3>
+        <p>Market microstructure, backtesting, risk modeling, trading strategy research, options pricing, financial modeling, market data pipelines, credit analysis</p>
+      </div>
+      <div class="band-bars" data-color="#c85a2a"></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- RESEARCH -->
+<section class="sec" id="research">
+  <div class="sec-header rv">
+    <div>
+      <div class="sec-num">03 — Research & teaching</div>
+      <div class="sec-title">Deep analysis</div>
+    </div>
+  </div>
+  <div class="research-grid rv">
+    <div class="r-card" style="grid-column:span 2">
+      <div class="r-status">Ongoing — working paper</div>
+      <h3>Information & Strategic Behavior in Markets</h3>
+      <p>Investigating how information asymmetries and strategic interactions between market participants influence price discovery, trading patterns, and market efficiency. Building on Kyle (1985) and Glosten-Milgrom foundational models.</p>
+      <div class="r-tags">
+        <span class="r-tag">market microstructure</span>
+        <span class="r-tag">game theory</span>
+        <span class="r-tag">information economics</span>
+        <span class="r-tag">price discovery</span>
+      </div>
+      <a href="https://drive.google.com/file/d/1_OA_DaWomvfMUJvULG9x9If43yq42KiN/view" target="_blank" class="r-link">Working paper</a>
+    </div>
+    <div class="r-card compact">
+      <div class="r-status">Sep 2024 — present</div>
+      <h3>Undergraduate Research Assistant</h3>
+      <p>UC San Diego, San Diego, CA</p>
+    </div>
+    <div class="r-card compact">
+      <div class="r-status">Mar 2026 — present</div>
+      <h3>Undergraduate Instructional Assistant</h3>
+      <p>UC San Diego, San Diego, CA</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- EXPERIENCE -->
+<section class="sec" id="positions">
+  <div class="sec-header rv">
+    <div>
+      <div class="sec-num">04 — Positions</div>
+      <div class="sec-title">Discrete events</div>
+    </div>
+  </div>
+  <div class="exp-list">
+    <div class="exp-row rv">
+      <div class="exp-date">Oct — Dec 2025</div>
+      <div><div class="exp-role">Artificial Intelligence Intern</div><div class="exp-org">Stealth AI Startup</div></div>
+      <div class="exp-loc">San Francisco, CA</div>
+    </div>
+    <div class="exp-row rv">
+      <div class="exp-date">Jul — Aug 2025</div>
+      <div><div class="exp-role">Quant Trading Intern</div><div class="exp-org">Limex</div></div>
+      <div class="exp-loc">New York, NY</div>
+    </div>
+    <div class="exp-row rv">
+      <div class="exp-date">Jan — Jun 2025</div>
+      <div><div class="exp-role">Algorithmic Problem Solving Intern</div><div class="exp-org">ICPC Foundation</div></div>
+      <div class="exp-loc">Woodway, TX</div>
+    </div>
+    <div class="exp-row rv">
+      <div class="exp-date">Sep 2024 — Present</div>
+      <div><div class="exp-role">Financial Assistant</div><div class="exp-org">UC San Diego</div></div>
+      <div class="exp-loc">San Diego, CA</div>
+    </div>
+    <div class="exp-row rv">
+      <div class="exp-date">Jun — Sep 2024</div>
+      <div><div class="exp-role">Data Science Intern</div><div class="exp-org">KopyKitab — Digibook Technologies</div></div>
+      <div class="exp-loc">Bengaluru, India</div>
+    </div>
+    <div class="exp-row rv">
+      <div class="exp-date">Feb — Jun 2022</div>
+      <div><div class="exp-role">Intern</div><div class="exp-org">6DegreesIT Pvt Ltd</div></div>
+      <div class="exp-loc">Indore, India</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROJECTS -->
+<section class="sec" id="projects">
+  <div class="sec-header rv">
+    <div>
+      <div class="sec-num">05 — Peak detections</div>
+      <div class="sec-title">Projects</div>
+    </div>
+    <div class="sec-subtitle">Notable outputs that crossed the detection threshold.</div>
+  </div>
+  <div class="proj-grid rv">
+    <div class="proj">
+      <span class="p-num">01</span>
+      <h3>PRISM</h3>
+      <p>Parallel LLM orchestration for asynchronous multi-model evaluation and reasoning synthesis.</p>
+      <div class="p-tags"><span class="p-tag">Python</span><span class="p-tag">LLM</span><span class="p-tag">Benchmarking</span></div>
+      <a href="https://github.com/anuyaya27/Prism" target="_blank" class="p-link">GitHub</a>
+    </div>
+    <div class="proj">
+      <span class="p-num">02</span>
+      <div class="proj-award">2nd best overall — HackPrinceton</div>
+      <h3>WattsUp</h3>
+      <p>CV platform for rooftop solar potential using satellite imagery and NASA climate data across 10K+ sq miles.</p>
+      <div class="p-tags"><span class="p-tag">ML</span><span class="p-tag">Computer Vision</span><span class="p-tag">Climate</span></div>
+      <a href="https://github.com/deepanshgandhi/Watts-Up" target="_blank" class="p-link">GitHub</a>
+    </div>
+    <div class="proj">
+      <span class="p-num">03</span>
+      <h3>EcoSim360</h3>
+      <p>Interactive economic policy impact simulation. Tested by UCSD Economics Department.</p>
+      <div class="p-tags"><span class="p-tag">Python</span><span class="p-tag">Streamlit</span><span class="p-tag">Data Science</span></div>
+    </div>
+    <div class="proj">
+      <span class="p-num">04</span>
+      <h3>NeoCred</h3>
+      <p>Alternative credit scoring via non-traditional signals. +20% classification accuracy.</p>
+      <div class="p-tags"><span class="p-tag">Flask</span><span class="p-tag">ML</span><span class="p-tag">APIs</span></div>
+      <a href="https://github.com/anuyaya27/NeoCred" target="_blank" class="p-link">GitHub</a>
+    </div>
+    <div class="proj">
+      <span class="p-num">05</span>
+      <h3>Emocia</h3>
+      <p>Real-time facial emoji mapping using CNN pipelines for human-AI interaction.</p>
+      <div class="p-tags"><span class="p-tag">TensorFlow</span><span class="p-tag">PyTorch</span><span class="p-tag">OpenCV</span></div>
+      <a href="https://github.com/anuyaya27/Emocia" target="_blank" class="p-link">GitHub</a>
+    </div>
+    <div class="proj">
+      <span class="p-num">06</span>
+      <h3>iHomeCure</h3>
+      <p>Founded digital health startup for home diagnostics in Tier-2 Indian cities.</p>
+      <div class="p-tags"><span class="p-tag">Flask</span><span class="p-tag">Firebase</span><span class="p-tag">GCP</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="sec" id="contact">
+  <div class="sec-header rv">
+    <div>
+      <div class="sec-num">06 — Channel open</div>
+      <div class="sec-title">Get in touch</div>
+    </div>
+  </div>
+  <div class="contact-grid rv">
+    <a href="mailto:27ananyasaxena@gmail.com" class="contact-card">
+      <div class="cc-label">Email</div>
+      <div class="cc-val">27ananyasaxena@gmail.com</div>
+    </a>
+    <a href="https://drive.google.com/file/d/1p6SOy2gdvvgJJOHQ69YrnRemIzV_vcbr/view" target="_blank" class="contact-card">
+      <div class="cc-label">Resume</div>
+      <div class="cc-val">View PDF</div>
+      <div class="cc-sub">Download latest version</div>
+    </a>
+    <a href="https://github.com/anuyaya27" target="_blank" class="contact-card">
+      <div class="cc-label">GitHub</div>
+      <div class="cc-val">anuyaya27</div>
+      <div class="cc-sub">Open source projects</div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <span>Ananya Saxena · UCSD 2026</span>
+  <span>End of signal.</span>
+</footer>
+
+<script>
+// ===== HERO CANVAS =====
+(function(){
+  const c=document.getElementById('heroCanvas'),x=c.getContext('2d');let w,h,t=0;
+  function resize(){w=c.width=c.offsetWidth*devicePixelRatio;h=c.height=c.offsetHeight*devicePixelRatio;x.scale(devicePixelRatio,devicePixelRatio)}
+  resize();window.addEventListener('resize',resize);
+  function draw(){
+    const cw=c.offsetWidth,ch=c.offsetHeight;x.clearRect(0,0,cw,ch);
+    [[50,0.002,0.006,0.35,'rgba(200,90,42,0.08)',1.5],[30,0.004,0.01,0.5,'rgba(45,212,168,0.05)',1],[20,0.007,0.004,0.65,'rgba(91,141,239,0.04)',0.8]]
+    .forEach(([amp,freq,spd,yp,col,lw])=>{
+      x.beginPath();x.strokeStyle=col;x.lineWidth=lw;
+      for(let i=0;i<cw;i+=2){const y=ch*yp+Math.sin(i*freq+t*spd)*amp+Math.sin(i*freq*2.1+t*spd*1.4)*amp*0.4;i?x.lineTo(i,y):x.moveTo(i,y)}
+      x.stroke();
     });
+    x.fillStyle='rgba(255,255,255,0.015)';
+    for(let gx=0;gx<cw;gx+=60)for(let gy=0;gy<ch;gy+=60){x.beginPath();x.arc(gx,gy,0.8,0,Math.PI*2);x.fill()}
+    t++;requestAnimationFrame(draw);
+  }
+  draw();
+})();
 
-    // Toggle experiences
-    let experiencesExpanded = false;
-    function toggleExperiences() {
-      const hiddenExperiences = document.querySelectorAll('.experience-card.hidden');
-      const btn = document.querySelector('.show-all-btn');
+// ===== SIGNAL TIMELINE =====
+(function(){
+  const c=document.getElementById('signalCanvas'),x=c.getContext('2d');
+  const data=[
+    {l:'6Degrees',s:'2022',xp:0.06,yp:0.82,col:'#c85a2a',r:4},
+    {l:'KopyKitab',s:'2024',xp:0.22,yp:0.6,col:'#c85a2a',r:4},
+    {l:'UCSD RA+Fin',s:"'24-pres",xp:0.38,yp:0.42,col:'#2dd4a8',r:4},
+    {l:'ICPC',s:'2025',xp:0.5,yp:0.32,col:'#c85a2a',r:4},
+    {l:'Limex',s:"NYC '25",xp:0.66,yp:0.14,col:'#c85a2a',r:6,peak:1},
+    {l:'AI Startup',s:"SF '25",xp:0.82,yp:0.1,col:'#5b8def',r:6,peak:1},
+  ];
+  let hov=-1;
+  function resize(){const r=c.getBoundingClientRect();c.width=r.width*devicePixelRatio;c.height=r.height*devicePixelRatio;x.scale(devicePixelRatio,devicePixelRatio);render()}
+  function render(){
+    const cw=c.offsetWidth,ch=c.offsetHeight,p={l:50,r:30,t:30,b:55},gw=cw-p.l-p.r,gh=ch-p.t-p.b;
+    x.clearRect(0,0,cw,ch);
+    x.strokeStyle='rgba(255,255,255,0.04)';x.lineWidth=0.5;
+    for(let i=0;i<=4;i++){const y=p.t+gh*(i/4);x.beginPath();x.moveTo(p.l,y);x.lineTo(p.l+gw,y);x.stroke()}
+    x.font='9px "Geist Mono",monospace';x.fillStyle='rgba(255,255,255,0.15)';x.textAlign='right';
+    x.fillText('100',p.l-10,p.t+5);x.fillText('0',p.l-10,p.t+gh+5);
+    const pts=data.map(d=>({px:p.l+d.xp*gw,py:p.t+d.yp*gh}));
+    x.beginPath();x.moveTo(pts[0].px,pts[0].py);
+    for(let i=1;i<pts.length;i++){const cp=(pts[i].px-pts[i-1].px)*0.4;x.bezierCurveTo(pts[i-1].px+cp,pts[i-1].py,pts[i].px-cp,pts[i].py,pts[i].px,pts[i].py)}
+    x.lineTo(pts[pts.length-1].px,p.t+gh);x.lineTo(pts[0].px,p.t+gh);x.closePath();
+    const g=x.createLinearGradient(0,p.t,0,p.t+gh);g.addColorStop(0,'rgba(200,90,42,0.1)');g.addColorStop(1,'rgba(200,90,42,0)');x.fillStyle=g;x.fill();
+    x.beginPath();x.moveTo(pts[0].px,pts[0].py);
+    for(let i=1;i<pts.length;i++){const cp=(pts[i].px-pts[i-1].px)*0.4;x.bezierCurveTo(pts[i-1].px+cp,pts[i-1].py,pts[i].px-cp,pts[i].py,pts[i].px,pts[i].py)}
+    x.strokeStyle='rgba(200,90,42,0.4)';x.lineWidth=1.5;x.stroke();
+    data.forEach((d,i)=>{
+      const px=pts[i].px,py=pts[i].py,isH=i===hov;
+      if(d.peak){x.beginPath();x.arc(px,py,d.r+6,0,Math.PI*2);x.strokeStyle=d.col+'25';x.lineWidth=0.8;x.stroke()}
+      x.beginPath();x.arc(px,py,isH?d.r+2:d.r,0,Math.PI*2);
+      x.fillStyle=d.peak?d.col:'#000';x.fill();
+      if(!d.peak){x.strokeStyle=d.col;x.lineWidth=1.5;x.stroke()}
+      x.beginPath();x.moveTo(px,py+d.r+4);x.lineTo(px,p.t+gh);x.strokeStyle='rgba(255,255,255,0.03)';x.lineWidth=0.5;x.setLineDash([2,4]);x.stroke();x.setLineDash([]);
+      x.textAlign='center';
+      x.font=isH?'500 11px "Geist Mono",monospace':(d.peak?'500 10px "Geist Mono",monospace':'10px "Geist Mono",monospace');
+      x.fillStyle=isH?'#fff':(d.peak?'#fff':'rgba(255,255,255,0.35)');
+      x.fillText(d.l,px,p.t+gh+20);
+      x.font='9px "Geist Mono",monospace';x.fillStyle='rgba(255,255,255,0.15)';x.fillText(d.s,px,p.t+gh+35);
+    });
+  }
+  c.addEventListener('mousemove',e=>{
+    const r=c.getBoundingClientRect(),mx=e.clientX-r.left,my=e.clientY-r.top,cw=c.offsetWidth,ch=c.offsetHeight;
+    const p={l:50,r:30,t:30,b:55},gw=cw-p.l-p.r,gh=ch-p.t-p.b;
+    hov=-1;data.forEach((d,i)=>{if(Math.hypot(mx-(p.l+d.xp*gw),my-(p.t+d.yp*gh))<20)hov=i});
+    c.style.cursor=hov>=0?'pointer':'default';render();
+  });
+  c.addEventListener('mouseleave',()=>{hov=-1;render()});
+  resize();window.addEventListener('resize',resize);
+})();
 
-      experiencesExpanded = !experiencesExpanded;
+// ===== TICKER DUPLICATE =====
+(function(){
+  const t=document.getElementById('tickerTrack');
+  t.innerHTML+=t.innerHTML;
+})();
 
-      hiddenExperiences.forEach(exp => exp.classList.toggle('hidden'));
-      btn.textContent = experiencesExpanded ? 'Show Less' : 'Show All Experiences';
+// ===== BAND BARS =====
+document.querySelectorAll('.band-bars').forEach(el=>{
+  for(let i=0;i<20;i++){
+    const b=document.createElement('div');b.className='bb';
+    b.style.height='0px';b.style.background=el.dataset.color;
+    el.appendChild(b);
+  }
+});
+const bandObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting)e.target.querySelectorAll('.bb').forEach(b=>{b.style.height=(4+Math.random()*36)+'px'})});
+},{threshold:0.3});
+document.querySelectorAll('.band-bars').forEach(el=>bandObs.observe(el));
 
-      if (!experiencesExpanded) {
-        document.querySelector('#experience').scrollIntoView({ behavior: 'smooth' });
-      }
-    }
-  </script>
+// ===== STAT COUNTER =====
+const statObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{
+    if(!e.isIntersecting)return;
+    const el=e.target,target=+el.dataset.target;
+    let cur=0;const step=Math.max(1,Math.floor(target/30));
+    const iv=setInterval(()=>{cur+=step;if(cur>=target){cur=target;clearInterval(iv)}el.textContent=cur},40);
+    statObs.unobserve(el);
+  });
+},{threshold:0.5});
+document.querySelectorAll('.stat-num').forEach(el=>statObs.observe(el));
 
+// ===== SCROLL REVEALS =====
+const rvObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:0.06});
+document.querySelectorAll('.rv').forEach(el=>rvObs.observe(el));
+
+// ===== NAV ACTIVE =====
+const secs=document.querySelectorAll('section[id]'),navLinks=document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll',()=>{
+  let cur='';secs.forEach(s=>{if(scrollY>=s.offsetTop-100)cur=s.id});
+  navLinks.forEach(a=>{a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+});
+</script>
 </body>
-
 </html>
