@@ -4,14 +4,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ananya Saxena</title>
-<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist+Mono:wght@300;400;500&family=Sora:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
 <!-- NAV -->
 <nav class="nav">
-  <div class="nav-brand">Ananya Saxena</div>
+  <div class="nav-brand"><span class="nav-orb"></span>Ananya Saxena</div>
   <div class="nav-links">
     <a href="#signal" class="on">Signal</a>
     <a href="#bands">Interests</a>
@@ -26,15 +28,17 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"><canvas id="heroCanvas"></canvas></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow two"></div>
   <div class="hero-split">
     <div class="hero-content">
+      <div class="hero-eyebrow"><span class="d"></span>Math-CS + Economics / UC San Diego / 2026</div>
       <h1>
-        Quantifying<br>
-        <span class="line2">market </span><span class="em">signals</span>
+        Mapping the<br>
+        <span class="grad">latent space</span><br>
+        <span class="thin">of markets and machines.</span>
       </h1>
-      <p><b>B.S. Mathematics-CS & B.A. Economics, UC San Diego 2026.</b></p>
-      <p class="hero-desc">Building at the intersection of quantitative methods, machine learning, and financial systems. </p>
-      <p></p>
+      <p class="hero-desc">Building at the intersection of quantitative methods, machine learning, and financial systems.</p>
       <div class="hero-actions">
         <a href="https://drive.google.com/file/d/1UTY-dUB25WYY-E3uVvrRSvomFt9pq3Dv/view?usp=sharing" target="_blank" class="btn primary">Resume</a>
         <a href="https://drive.google.com/file/d/1dLxgsNfGu6xUdfXNmnwgjNbdC1S00KUw/view?usp=sharing" target="_blank" class="btn">Research Paper (Working)</a>
@@ -109,9 +113,9 @@
   </div>
   <canvas id="signalCanvas" class="rv"></canvas>
   <div class="sig-legend rv">
-    <span><span class="sig-dot" style="background:#c85a2a"></span> Quant / data</span>
-    <span><span class="sig-dot" style="background:#5b8def"></span> AI / ML</span>
-    <span><span class="sig-dot" style="background:#2dd4a8"></span> Research / academic</span>
+    <span><span class="sig-dot" style="background:#8B6CFF"></span> Quant / data</span>
+    <span><span class="sig-dot" style="background:#3FE0E8"></span> AI / ML</span>
+    <span><span class="sig-dot" style="background:#FF5CC8"></span> Research / academic</span>
   </div>
 </section>
 
@@ -133,7 +137,7 @@
         <h3>Mathematics & Probability</h3>
         <p>Stochastic calculus, martingale theory, statistical learning, econometrics, linear algebra, convex optimization, real analysis, abstract algebra</p>
       </div>
-      <div class="band-bars" data-color="#2dd4a8"></div>
+      <div class="band-bars" data-color="#8B6CFF"></div>
     </div>
     <div class="band rv">
       <div class="band-num">02</div>
@@ -141,7 +145,7 @@
         <h3>Systems & ML</h3>
         <p>Python, PySpark, Airflow, SQL, AWS, GCP, TensorFlow, PyTorch, Docker, FastAPI, Scikit-learn, Pandas, NumPy</p>
       </div>
-      <div class="band-bars" data-color="#5b8def"></div>
+      <div class="band-bars" data-color="#3FE0E8"></div>
     </div>
     <div class="band rv">
       <div class="band-num">03</div>
@@ -149,7 +153,7 @@
         <h3>Quantitative Finance</h3>
         <p>Market microstructure, backtesting, risk modeling, trading strategy research, options pricing, financial modeling, market data pipelines, credit analysis</p>
       </div>
-      <div class="band-bars" data-color="#c85a2a"></div>
+      <div class="band-bars" data-color="#FF5CC8"></div>
     </div>
   </div>
 </section>
@@ -165,7 +169,7 @@
     </div>
   </div>
   <div class="research-grid rv">
-    <div class="r-card" style="grid-column:span 2">
+    <div class="r-card wide">
       <div class="r-status">Ongoing: working paper</div>
       <h3>Information & Strategic Behavior in Markets</h3>
       <p>Investigating how information asymmetries and strategic interactions between market participants influence price discovery, trading patterns, and market efficiency. Building on Kyle (1985) and Glosten-Milgrom foundational models.</p>
@@ -178,12 +182,12 @@
       <a href="https://drive.google.com/file/d/1_OA_DaWomvfMUJvULG9x9If43yq42KiN/view" target="_blank" class="r-link">Working paper</a>
     </div>
     <div class="r-card compact">
-      <div class="r-status">Sep 2024 — present</div>
+      <div class="r-status">Sep 2024 to present</div>
       <h3>Undergraduate Research Assistant</h3>
       <p>UC San Diego, San Diego, CA</p>
     </div>
     <div class="r-card compact">
-      <div class="r-status">Mar 2026 — present</div>
+      <div class="r-status">Mar 2026 to present</div>
       <h3>Undergraduate Instructional Assistant</h3>
       <p>UC San Diego, San Diego, CA</p>
     </div>
@@ -196,29 +200,29 @@
 <section class="sec" id="positions">
   <div class="sec-header rv">
     <div>
-      <div class="sec-num">04 — Positions</div>
+      <div class="sec-num">04 Positions</div>
       <div class="sec-title">Discrete events</div>
     </div>
   </div>
   <div class="exp-list">
     <div class="exp-row rv">
-      <div class="exp-date">Oct — Dec 2025</div>
+      <div class="exp-date">Oct to Dec 2025</div>
       <div><div class="exp-role">Artificial Intelligence Intern</div><div class="exp-org">Stealth AI Startup</div></div>
       <div class="exp-loc">San Francisco, CA</div>
     </div>
     <div class="exp-row rv">
-      <div class="exp-date">Jul — Aug 2025</div>
+      <div class="exp-date">Jul to Aug 2025</div>
       <div><div class="exp-role">Quant Trading Intern</div><div class="exp-org">Limex</div></div>
       <div class="exp-loc">New York, NY</div>
     </div>
     <div class="exp-row rv">
-      <div class="exp-date">Jan — Jun 2025</div>
+      <div class="exp-date">Jan to Jun 2025</div>
       <div><div class="exp-role">Algorithmic Problem Solving Intern</div><div class="exp-org">ICPC Foundation</div></div>
       <div class="exp-loc">Woodway, TX</div>
     </div>
     <div class="exp-row rv">
-      <div class="exp-date">Jun — Sep 2024</div>
-      <div><div class="exp-role">Data Science Intern</div><div class="exp-org">KopyKitab — Digibook Technologies</div></div>
+      <div class="exp-date">Jun to Sep 2024</div>
+      <div><div class="exp-role">Data Science Intern</div><div class="exp-org">KopyKitab, Digibook Technologies</div></div>
       <div class="exp-loc">Bengaluru, India</div>
     </div>
   </div>
@@ -230,7 +234,7 @@
 <section class="sec" id="projects">
   <div class="sec-header rv">
     <div>
-      <div class="sec-num">05 — Peak detections</div>
+      <div class="sec-num">05 Peak detections</div>
       <div class="sec-title">Selected Projects</div>
     </div>
     <div class="sec-subtitle">Notable outputs that crossed the detection threshold.</div>
@@ -245,7 +249,7 @@
     </div>
     <div class="proj">
       <span class="p-num">02</span>
-      <div class="proj-award">2nd best overall — HackPrinceton</div>
+      <div class="proj-award">2nd best overall, HackPrinceton</div>
       <h3>WattsUp</h3>
       <p>CV platform for rooftop solar potential using satellite imagery and NASA climate data across 10K+ sq miles.</p>
       <div class="p-tags"><span class="p-tag">ML</span><span class="p-tag">Computer Vision</span><span class="p-tag">Climate</span></div>
@@ -262,11 +266,12 @@
 
 <div class="divider"></div>
 
+<!-- AWARDS -->
 <section class="sec" id="awards">
   <div class="sec-header rv">
     <div>
-      <div class="sec-num">06 — Awards</div>
-      <div class="sec-title">Selected Honors and Awards </div>
+      <div class="sec-num">06 Awards</div>
+      <div class="sec-title">Selected Honors and Awards</div>
     </div>
   </div>
   <div class="proj-grid rv">
@@ -299,7 +304,7 @@
 <section class="sec" id="contact">
   <div class="sec-header rv">
     <div>
-      <div class="sec-num">06 — Channel open</div>
+      <div class="sec-num">07 Channel open</div>
       <div class="sec-title">Get in touch</div>
     </div>
   </div>
@@ -312,7 +317,6 @@
       <div class="cc-label">LinkedIn</div>
       <div class="cc-val">Connect with me!</div>
     </a>
-    
     <a href="https://github.com/anuyaya27" target="_blank" class="contact-card">
       <div class="cc-label">GitHub</div>
       <div class="cc-val">anuyaya27</div>
@@ -326,66 +330,87 @@
 </footer>
 
 <script>
-// ===== HERO CANVAS =====
+// ===== HERO CANVAS: LATENT SPACE FIELD =====
 (function(){
-  const c=document.getElementById('heroCanvas'),x=c.getContext('2d');let w,h,t=0;
-  function resize(){w=c.width=c.offsetWidth*devicePixelRatio;h=c.height=c.offsetHeight*devicePixelRatio;x.scale(devicePixelRatio,devicePixelRatio)}
-  resize();window.addEventListener('resize',resize);
-  function draw(){
-    const cw=c.offsetWidth,ch=c.offsetHeight;x.clearRect(0,0,cw,ch);
-    [[50,0.002,0.006,0.35,'rgba(200,90,42,0.08)',1.5],[30,0.004,0.01,0.5,'rgba(45,212,168,0.05)',1],[20,0.007,0.004,0.65,'rgba(91,141,239,0.04)',0.8]]
-    .forEach(([amp,freq,spd,yp,col,lw])=>{
-      x.beginPath();x.strokeStyle=col;x.lineWidth=lw;
-      for(let i=0;i<cw;i+=2){const y=ch*yp+Math.sin(i*freq+t*spd)*amp+Math.sin(i*freq*2.1+t*spd*1.4)*amp*0.4;i?x.lineTo(i,y):x.moveTo(i,y)}
-      x.stroke();
-    });
-    x.fillStyle='rgba(255,255,255,0.015)';
-    for(let gx=0;gx<cw;gx+=60)for(let gy=0;gy<ch;gy+=60){x.beginPath();x.arc(gx,gy,0.8,0,Math.PI*2);x.fill()}
-    t++;requestAnimationFrame(draw);
+  const c=document.getElementById('heroCanvas');if(!c)return;
+  const x=c.getContext('2d');
+  const reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+  const cols=['139,108,255','63,224,232','255,92,200','255,196,107'];
+  let W,H,DPR,pts=[];
+  function init(){
+    DPR=Math.min(window.devicePixelRatio||1,2);
+    W=c.width=c.offsetWidth*DPR;H=c.height=c.offsetHeight*DPR;
+    const N=Math.max(24,Math.floor(c.offsetWidth/16));pts=[];
+    for(let i=0;i<N;i++){
+      pts.push({x:Math.random()*W,y:Math.random()*H,
+        vx:(Math.random()-.5)*.18*DPR,vy:(Math.random()-.5)*.18*DPR,
+        r:(Math.random()*1.8+1)*DPR,c:cols[i%cols.length]});
+    }
   }
-  draw();
+  function frame(){
+    x.clearRect(0,0,W,H);
+    for(let i=0;i<pts.length;i++){
+      const p=pts[i];p.x+=p.vx;p.y+=p.vy;
+      if(p.x<0||p.x>W)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;
+      for(let j=i+1;j<pts.length;j++){
+        const q=pts[j],dx=p.x-q.x,dy=p.y-q.y,d=Math.hypot(dx,dy);
+        if(d<140*DPR){
+          x.strokeStyle='rgba(139,108,255,'+(0.13*(1-d/(140*DPR)))+')';
+          x.lineWidth=1;x.beginPath();x.moveTo(p.x,p.y);x.lineTo(q.x,q.y);x.stroke();
+        }
+      }
+    }
+    for(const p of pts){
+      x.beginPath();x.arc(p.x,p.y,p.r,0,7);
+      x.fillStyle='rgba('+p.c+',.9)';
+      x.shadowColor='rgba('+p.c+',.8)';x.shadowBlur=8*DPR;x.fill();x.shadowBlur=0;
+    }
+    if(!reduce)requestAnimationFrame(frame);
+  }
+  init();frame();
+  window.addEventListener('resize',()=>{init();if(reduce)frame();});
 })();
 
 // ===== SIGNAL TIMELINE =====
 (function(){
   const c=document.getElementById('signalCanvas'),x=c.getContext('2d');
   const data=[
-    {l:'6Degrees',s:'2022',xp:0.06,yp:0.82,col:'#c85a2a',r:4},
-    {l:'KopyKitab',s:'2024',xp:0.22,yp:0.6,col:'#c85a2a',r:4},
-    {l:'UCSD RA+Fin',s:"'24-pres",xp:0.38,yp:0.42,col:'#2dd4a8',r:4},
-    {l:'ICPC',s:'2025',xp:0.5,yp:0.32,col:'#c85a2a',r:4},
-    {l:'Limex',s:"NYC '25",xp:0.66,yp:0.14,col:'#c85a2a',r:6,peak:1},
-    {l:'AI Startup',s:"SF '25",xp:0.82,yp:0.1,col:'#5b8def',r:6,peak:1},
+    {l:'6Degrees',s:'2022',xp:0.06,yp:0.82,col:'#8B6CFF',r:4},
+    {l:'KopyKitab',s:'2024',xp:0.22,yp:0.6,col:'#8B6CFF',r:4},
+    {l:'UCSD RA+Fin',s:"'24-pres",xp:0.38,yp:0.42,col:'#FF5CC8',r:4},
+    {l:'ICPC',s:'2025',xp:0.5,yp:0.32,col:'#8B6CFF',r:4},
+    {l:'Limex',s:"NYC '25",xp:0.66,yp:0.14,col:'#8B6CFF',r:6,peak:1},
+    {l:'AI Startup',s:"SF '25",xp:0.82,yp:0.1,col:'#3FE0E8',r:6,peak:1},
   ];
   let hov=-1;
   function resize(){const r=c.getBoundingClientRect();c.width=r.width*devicePixelRatio;c.height=r.height*devicePixelRatio;x.scale(devicePixelRatio,devicePixelRatio);render()}
   function render(){
     const cw=c.offsetWidth,ch=c.offsetHeight,p={l:50,r:30,t:30,b:55},gw=cw-p.l-p.r,gh=ch-p.t-p.b;
     x.clearRect(0,0,cw,ch);
-    x.strokeStyle='rgba(255,255,255,0.04)';x.lineWidth=0.5;
+    x.strokeStyle='rgba(140,120,255,0.08)';x.lineWidth=0.5;
     for(let i=0;i<=4;i++){const y=p.t+gh*(i/4);x.beginPath();x.moveTo(p.l,y);x.lineTo(p.l+gw,y);x.stroke()}
-    x.font='9px "Geist Mono",monospace';x.fillStyle='rgba(255,255,255,0.15)';x.textAlign='right';
+    x.font='9px "IBM Plex Mono",monospace';x.fillStyle='rgba(236,235,255,0.2)';x.textAlign='right';
     x.fillText('100',p.l-10,p.t+5);x.fillText('0',p.l-10,p.t+gh+5);
     const pts=data.map(d=>({px:p.l+d.xp*gw,py:p.t+d.yp*gh}));
     x.beginPath();x.moveTo(pts[0].px,pts[0].py);
     for(let i=1;i<pts.length;i++){const cp=(pts[i].px-pts[i-1].px)*0.4;x.bezierCurveTo(pts[i-1].px+cp,pts[i-1].py,pts[i].px-cp,pts[i].py,pts[i].px,pts[i].py)}
     x.lineTo(pts[pts.length-1].px,p.t+gh);x.lineTo(pts[0].px,p.t+gh);x.closePath();
-    const g=x.createLinearGradient(0,p.t,0,p.t+gh);g.addColorStop(0,'rgba(200,90,42,0.1)');g.addColorStop(1,'rgba(200,90,42,0)');x.fillStyle=g;x.fill();
+    const g=x.createLinearGradient(0,p.t,0,p.t+gh);g.addColorStop(0,'rgba(139,108,255,0.16)');g.addColorStop(1,'rgba(139,108,255,0)');x.fillStyle=g;x.fill();
     x.beginPath();x.moveTo(pts[0].px,pts[0].py);
     for(let i=1;i<pts.length;i++){const cp=(pts[i].px-pts[i-1].px)*0.4;x.bezierCurveTo(pts[i-1].px+cp,pts[i-1].py,pts[i].px-cp,pts[i].py,pts[i].px,pts[i].py)}
-    x.strokeStyle='rgba(200,90,42,0.4)';x.lineWidth=1.5;x.stroke();
+    x.strokeStyle='rgba(139,108,255,0.55)';x.lineWidth=1.6;x.stroke();
     data.forEach((d,i)=>{
       const px=pts[i].px,py=pts[i].py,isH=i===hov;
-      if(d.peak){x.beginPath();x.arc(px,py,d.r+6,0,Math.PI*2);x.strokeStyle=d.col+'25';x.lineWidth=0.8;x.stroke()}
+      if(d.peak){x.beginPath();x.arc(px,py,d.r+6,0,Math.PI*2);x.strokeStyle=d.col+'30';x.lineWidth=0.8;x.stroke()}
       x.beginPath();x.arc(px,py,isH?d.r+2:d.r,0,Math.PI*2);
-      x.fillStyle=d.peak?d.col:'#000';x.fill();
-      if(!d.peak){x.strokeStyle=d.col;x.lineWidth=1.5;x.stroke()}
-      x.beginPath();x.moveTo(px,py+d.r+4);x.lineTo(px,p.t+gh);x.strokeStyle='rgba(255,255,255,0.03)';x.lineWidth=0.5;x.setLineDash([2,4]);x.stroke();x.setLineDash([]);
+      x.fillStyle=d.peak?d.col:'#0A0A12';x.fill();
+      if(!d.peak){x.strokeStyle=d.col;x.lineWidth=1.6;x.stroke()}
+      x.beginPath();x.moveTo(px,py+d.r+4);x.lineTo(px,p.t+gh);x.strokeStyle='rgba(140,120,255,0.06)';x.lineWidth=0.5;x.setLineDash([2,4]);x.stroke();x.setLineDash([]);
       x.textAlign='center';
-      x.font=isH?'500 11px "Geist Mono",monospace':(d.peak?'500 10px "Geist Mono",monospace':'10px "Geist Mono",monospace');
-      x.fillStyle=isH?'#fff':(d.peak?'#fff':'rgba(255,255,255,0.35)');
+      x.font=isH?'500 11px "IBM Plex Mono",monospace':(d.peak?'500 10px "IBM Plex Mono",monospace':'10px "IBM Plex Mono",monospace');
+      x.fillStyle=isH?'#ECEBFF':(d.peak?'#ECEBFF':'rgba(236,235,255,0.4)');
       x.fillText(d.l,px,p.t+gh+20);
-      x.font='9px "Geist Mono",monospace';x.fillStyle='rgba(255,255,255,0.15)';x.fillText(d.s,px,p.t+gh+35);
+      x.font='9px "IBM Plex Mono",monospace';x.fillStyle='rgba(236,235,255,0.2)';x.fillText(d.s,px,p.t+gh+35);
     });
   }
   c.addEventListener('mousemove',e=>{
@@ -416,18 +441,6 @@ const bandObs=new IntersectionObserver(entries=>{
   entries.forEach(e=>{if(e.isIntersecting)e.target.querySelectorAll('.bb').forEach(b=>{b.style.height=(4+Math.random()*36)+'px'})});
 },{threshold:0.3});
 document.querySelectorAll('.band-bars').forEach(el=>bandObs.observe(el));
-
-// ===== STAT COUNTER =====
-const statObs=new IntersectionObserver(entries=>{
-  entries.forEach(e=>{
-    if(!e.isIntersecting)return;
-    const el=e.target,target=+el.dataset.target;
-    let cur=0;const step=Math.max(1,Math.floor(target/30));
-    const iv=setInterval(()=>{cur+=step;if(cur>=target){cur=target;clearInterval(iv)}el.textContent=cur},40);
-    statObs.unobserve(el);
-  });
-},{threshold:0.5});
-document.querySelectorAll('.stat-num').forEach(el=>statObs.observe(el));
 
 // ===== SCROLL REVEALS =====
 const rvObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('vis')})},{threshold:0.06});
@@ -469,9 +482,9 @@ window.addEventListener('scroll',()=>{
   function makeRow(item,type){
     const maxSize=50;
     const pct=(item.size/maxSize)*100;
-    const color=type==='bid'?'rgba(14,203,129,':'rgba(200,90,42,';
+    const color=type==='bid'?'rgba(63,224,232,':'rgba(255,92,200,';
     return `<div class="ob-row-data">
-      <div class="ob-row-bg" style="width:${pct}%;background:${color}0.08)"></div>
+      <div class="ob-row-bg" style="width:${pct}%;background:${color}0.10)"></div>
       <span class="ob-cell">${item.skill}</span>
       <span class="ob-cell ob-price" style="color:${color}1)">${item.price.toFixed(1)}</span>
       <span class="ob-cell ob-size">${item.size}</span>
